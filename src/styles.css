@@ -1,0 +1,11 @@
+body{
+    background:linear-gradient(to left, #123024, #52b788);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+h1{
+    color: #b6c207;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
