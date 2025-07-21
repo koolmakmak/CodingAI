@@ -4,8 +4,12 @@
 }
 
 body{
-    background-color: #32612d;
-    margin-top: 0;
+    background-color: white;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 ul{
@@ -38,12 +42,32 @@ header .navbar {
     padding: 20px;
     align-items: center;
     justify-content: space-between;
+    height: 60px;
 }
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 50px;
+    background: #728c69;
+}
+
 header{
     position: fixed;
     width: 100%;
     z-index: 5;
     background-color:#32612d;
+    height: 100px;
 }
 
 .navbar .nav-logo .logo-text{
@@ -140,6 +164,57 @@ header{
     padding: 0 30px;
 }
 
+.about-section{
+    padding: 120px 0;
+    background-color: white;
+    color: black;
+}
+
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-section .about-details {
+    max-width: 50%;
+}
+
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.about-section .about-details .section-title {
+    padding: 0;
+}
+
+.about-section .social-link-list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.about-section .social-link-list .social-link {
+    color: #32612d;
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link:hover {
+    color: #728c69;
+}
+
 @media screen and (max-width: 800px) {
     
     body.show-mobile-menu header::before {
@@ -205,7 +280,7 @@ header{
         justify-content: center;
     }
 
-    .hero-section .hero-details :is(.subtitle, .description){
+    .hero-section .hero-details :is(.subtitle, .description), .about-section .about-details {
         max-width: 100%;
     }
 
@@ -217,7 +292,19 @@ header{
     .hero-section .hero-image-wrapper {
         max-width: 270px;
         margin-right: 0;
-        margin-top: 150px;
+        margin-top: 50px;
+    }
+
+    .about-section .section-content {
+        gap: 70px;
+        flex-direction: column-reverse;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
     }
 
 }
